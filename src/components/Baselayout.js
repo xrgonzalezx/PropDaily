@@ -6,11 +6,13 @@ import Footer from './Footer'
 class BaseLayout extends Component {
   render() {
     return (
+      <div>
       <Header />
 
-{this.props.children}
+      {this.props.children}
 
       <Footer />
+      </div>
     );
   }
 }
