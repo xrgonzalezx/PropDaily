@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
+import Header from './Header'
+import Footer from './Footer'
 
-function BaseLayout(props) {
-  return (
-    <div className="base">
-      <nav className="navbar">
-        <h3>I am the Navigation Bar</h3>
-      </nav>
 
-      {props.children}
+class BaseLayout extends Component {
+  render() {
+    return (
+      <Header />
 
-      <footer className="footer">
-        <h3>I am the Footer</h3>
-      </footer>
-    </div>
-  );
+{this.props.children}
+
+      <Footer />
+    );
+  }
 }
 
 export default BaseLayout;
